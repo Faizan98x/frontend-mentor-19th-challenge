@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+$Moderate-violet: hsl(263, 55%, 52%);
+$Very-dark-grayish-blue: hsl(217, 19%, 35%, 70%);
+$Very-dark-blackish-blue: hsl(219, 29%, 14%);
+$White: hsl(0, 0%, 100%);
+
+$Light-gray: hsl(0, 0%, 81%);
+$Light-grayish-blue: hsl(210, 46%, 95%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: $Light-grayish-blue;
+
+  .main {
+    background-color: $Light-grayish-blue;
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+      "danial danial danial jonathan kira"
+      "jeanette patrick patrick patrick kira";
+    gap: 15px;
+    padding: 3rem 20rem;
+
+    section {
+      padding-block: 3rem 1rem;
+      padding-inline: 2.5rem;
+      border-radius: 5px;
+      box-shadow: 0 5px 10px $Very-dark-grayish-blue;
+
+      figure {
+        display: flex;
+        align-items: center;
+        img {
+          border-radius: 50%;
+          width: 3rem;
+          border: 2px solid lighten($color: $Moderate-violet, $amount: 10%);
+        }
+        figcaption {
+          margin-left: 1rem;
+          font-size: 1.2rem;
+          color: $White;
+
+          small {
+            color: $Light-gray;
+            opacity: 50%;
+            display: block;
+          }
+        }
+      }
+      h1 {
+        color: $White;
+        margin-top: 1.5rem;
+      }
+
+      p {
+        margin-top: 1.5rem;
+        color: $Light-gray;
+        opacity: 70%;
+        line-height: 1.5;
+      }
+    }
+
+    .danial {
+      grid-area: danial;
+      background-color: $Moderate-violet;
+      background-image: url(../images/bg-pattern-quotation.svg);
+      background-repeat: no-repeat;
+      background-position-x: 250px;
+      background-size: 90px;
+    }
+    .jonathan {
+      grid-area: jonathan;
+      background-color: darken($color: $Very-dark-blackish-blue, $amount: 1%);
+
+      figure {
+        img {
+          border-color: $Light-gray;
+        }
+      }
+    }
+    .jeanette {
+      grid-area: jeanette;
+      background-color: $White;
+
+      figure {
+        img {
+          border-color: $White;
+        }
+        figcaption {
+          color: $Very-dark-blackish-blue;
+
+          small {
+            color: $Very-dark-blackish-blue;
+          }
+        }
+      }
+      h1 {
+        color: $Very-dark-blackish-blue;
+      }
+
+      p {
+        color: $Very-dark-blackish-blue;
+      }
+    }
+    .patrick {
+      grid-area: patrick;
+      background-color: $Very-dark-blackish-blue;
+    }
+    .kira {
+      grid-area: kira;
+      background-color: $White;
+
+      figure {
+        img {
+          border-color: $White;
+        }
+        figcaption {
+          color: $Very-dark-blackish-blue;
+
+          small {
+            color: $Very-dark-blackish-blue;
+          }
+        }
+      }
+
+      h1 {
+        color: $Very-dark-blackish-blue;
+      }
+
+      p {
+        color: $Very-dark-blackish-blue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  body {
+    .main {
+      grid-template-areas:
+        "danial" "jonathan"
+        "jeanette" " patrick" " kira";
+      padding: 3rem;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
