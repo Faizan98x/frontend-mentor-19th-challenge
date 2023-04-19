@@ -20,12 +20,13 @@ html {
 
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
-  min-height: 100vh;
-  max-width: 100vw;
+
   background-color: $Light-grayish-blue;
 
   .main {
     background-color: $Light-grayish-blue;
+    min-height: 100vh;
+    max-width: 100vw;
     display: grid;
     justify-content: center;
     grid-template-areas:
